@@ -1,4 +1,4 @@
-litevirt-livecd
+litevirt-hypervisor
 ===============
 
 Based on ovirt-node project, create img of Openstack nodes
