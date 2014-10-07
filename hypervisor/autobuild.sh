@@ -1,9 +1,9 @@
 #! /bin/bash
 
-if ! options=$(getopt -u -o k,o --long kimchi,openstack -- "$@")
+if ! options=$(getopt -u -o k --long kimchi -- "$@")
 then
     # something went wrong, getopt will put out an error message for us
-    echo "Usage: sh autobuild.sh --kimchi --openstack"
+    echo "Usage: sh autobuild.sh --kimchi"
     exit 1
 fi
 
@@ -13,7 +13,6 @@ while [ $# -gt 0 ]
 do
     case $1 in
     -k|--kimchi) kimchi="true"; shift;;
-    -o|--openstack) openstack="true"; shift;;
     (--) shift; break;;
     (-*) echo "$0: error - unrecognized option $1" 1>&2; exit 1;;
     (*) break;;
@@ -47,15 +46,9 @@ fi
 # build ovirt-node
 git clone https://github.com/litevirt/ovirt-node.git
 cd ovirt-node
-git checkout openstack
 
 if [ x$kimchi != x ];then
   echo "%include kimchi/kimchi.ks" >> recipe/ovirt-node-image.ks.in
-fi
-
-if [ x$openstack != x ];then
-  echo "%include openstack/openstack-common.ks" >> recipe/ovirt-node-image.ks.in
-  echo "%include openstack/openstack-compute.ks" >> recipe/ovirt-node-image.ks.in
 fi
 
 # generate iso
