@@ -2,7 +2,7 @@
 
 os_type=`cat /etc/issue | head -1 |awk '{print $1}'`
 
-if [ "$os_type" != "Fedora" ];then
+if [ "$os_type" == "CentOS" ];then
   wget http://mirrors.163.com/.help/CentOS6-Base-163.repo CentOS6-Base-163.repo
   mv CentOS6-Base-163.repo /etc/yum.repos.d/
 
@@ -15,7 +15,7 @@ if [ "$os_type" != "Fedora" ];then
 fi
 
 
-if [ "$os_type" != "Fedora" ];then
+if [ "$os_type" == "Fedora" ];then
   wget http://mirrors.163.com/.help/fedora-163.repo
   mv fedora-163.repo /etc/yum.repos.d/
 
