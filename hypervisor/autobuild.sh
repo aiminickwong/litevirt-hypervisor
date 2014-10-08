@@ -46,6 +46,7 @@ fi
 # build ovirt-node
 git clone https://github.com/litevirt/ovirt-node.git
 cd ovirt-node
+git checkout hypervisor
 
 if [ x$kimchi != x ];then
   echo "%include kimchi/kimchi.ks" >> recipe/ovirt-node-image.ks.in
