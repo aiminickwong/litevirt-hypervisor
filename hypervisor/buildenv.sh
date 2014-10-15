@@ -51,7 +51,7 @@ fi
 yum clean all
 
 # install dependent packages for building iso.
-pkgs="gcc make autoconf automake gettext-devel git python-cherrypy python-cheetah libxml2-python python-imaging PyPAM m2crypto python-jsonschema rpm-build python-psutil python-ethtool sos python-ipaddr python-lxml nfs-utils iscsi-initiator-utils libxslt pyparted nginx python-unittest2 python-ordereddict hardlink pykickstart createrepo livecd-tools appliance-tools appliance-tools-minimizer"
+pkgs="gcc make autoconf automake gettext-devel git python-cherrypy python-cheetah libxml2-python python-imaging PyPAM m2crypto python-jsonschema rpm-build python-psutil python-ethtool sos python-ipaddr python-lxml nfs-utils iscsi-initiator-utils libxslt pyparted nginx python-unittest2 python-ordereddict hardlink pykickstart createrepo livecd-tools appliance-tools appliance-tools-minimizer policycoreutils-python"
 
 for pkg in $pkgs
 do
