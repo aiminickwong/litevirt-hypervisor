@@ -5,7 +5,7 @@ Based on projects of ovirt-node and kimchi, provides capability to fastly constr
 
 1. Install a host with CentOS 6.5
 
-2. Git clone this project and switch branch to hypervisor
+2. Git clone this project
 
 3. Construct compiler environment 
 
