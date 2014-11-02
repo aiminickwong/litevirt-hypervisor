@@ -3,7 +3,6 @@
 # `buildenv.sh` is a script used to prepare build environment for building iso.
 
 # check os type
-os_type=`cat /etc/issue | head -1 |awk '{print $1}'`
 if [ ! -f /etc/centos-release ];then
   echo "Sorry, not support this OS by now."
   exit 1
