@@ -36,8 +36,5 @@ pkgs="gcc make autoconf automake gettext-devel git python-cherrypy python-cheeta
 PyPAM m2crypto python-jsonschema rpm-build python-psutil python-ethtool sos python-ipaddr python-lxml nfs-utils \
 iscsi-initiator-utils libxslt pyparted nginx python-unittest2 python-ordereddict hardlink pykickstart createrepo \
 livecd-tools appliance-tools appliance-tools-minimizer policycoreutils-python selinux-policy-devel grub2-efi"
-#yum install -y $pkgs
-for pkg in $pkgs
-do
-  yum install -y $pkg
-done
+yum install -y $pkgs
+
