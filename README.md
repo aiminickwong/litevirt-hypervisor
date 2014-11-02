@@ -11,11 +11,11 @@ Based on projects of ovirt-node and kimchi, provides capability to fastly constr
 
    cd hypervisor
 
-   sh buildenv.sh
+   sh install-deps.sh
 
 4. Compile iso
 
-   sh autobuild.sh
+   sh build-iso.sh
    
 5. Install iso
 
